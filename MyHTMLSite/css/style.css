@@ -1,0 +1,11 @@
+/* CSS Document */
+
+h1 {
+	color:steelblue; font-size:50px; text-align: center; font-family:Courier New;
+}
+#firstname { 
+    color:white; background-color: steelblue; font-size:30px; font-family:Courier New;
+}
+li {color:midnightblue; font-family:Courier New;
+}
+img { text-align:center; }
