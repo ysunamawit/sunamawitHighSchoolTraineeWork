@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <body ="Bungee Shade.jpg" >
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript" src="weather.js"> </script>
+            <link rel="stylesheet" type="text/css" href="weather.css">
+        </head>      
+        <style>
+            body, html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+            }
+
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+            position: relative;
+            opacity: 0.65;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            }
+            .bgimg-1 {
+            background-image: url("lol.jpg");
+            height: 50%;
+            }
+
+            .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            }
+
+            .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+            }
+        </style>
+            </head>
+            <body>
+
+            <div class="bgimg-1">
+            <div class="caption">
+                <span class="border">Weather forecasts for</span><br>
+                <span class="border">cities in the United States</span>
+            </div>
+            </div>
+                
+
+        </style>
+    <fieldset color = 'white'>
+        <form id="success">
+            <select id = "city">
+                <!-- <option value="Los A bgeles, CA">Los Angeles, Ca</option>
+                <option value="San Diego, CA">San Diego, CA</option>
+                <option value="Palo Alto, CA">Palo Alto, CA</option>
+                <option value="Berkley, CA">Berkley, CA</option>
+                <option value="New York City, NY">New York, NY</option> -->
+            </select>
+            <input type="submit" value="Get Weather">
+        </form>
+    </fieldset>
+    <div class="parent" >
+        <p class="tempTitle"> Temperature °F:</p>
+        <p id="temp" class = "temp" ></p>
+        <p class="conditionLabel" >Condition:</p>
+        <p class = "condition" id="condition"></p>
+        
+        <img class="sunImage" src="200_s.gif" alt="Trulli" width="300" height="300"> 
+        <img class="cloudImage" src="cloudy.png" alt="Trulli" width="400" height="400"> 
+    </div>
+
+
+    </body>
+</html>

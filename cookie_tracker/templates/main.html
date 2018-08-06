@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="/static/js/main.js"></script>
+      <link rel="stylesheet" type="text/css" href="/static/css/styles.css?version=3.2" />
+
+    </head>
+    <style>
+      table, td, th {
+        border: 3px solid #ddd;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        length: 100%;
+      }
+
+      th, td {
+        padding: 15px;
+      }
+    </style>
+    <title>Cookies!</title>
+    <body>
+    <table>
+      <tr>
+          <th> Name </th>
+          <th> Rating </th>
+      </tr>
+
+      {% for cookie in cookies %}
+
+        <table>
+           <th>{{ cookie.name }}</th>
+            <th>{{ cookie.rating }}</th>
+        </table>
+
+
+      {% endfor %}
+    </table>
+
+    <form id="form">
+      Name of cookie <input type="text" name="cookies" id = "text"> <br>
+      <label>Cookie Rating</label>
+      <select id="myselect" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <input type="submit" id="submit" value="Submit">Submit Rating!</input>
+
+      <div id = "message">
+        
+
+      </div>
+
+
+    </form>
+        <!-- your code goes here -->
+    </body>
+</html>

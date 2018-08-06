@@ -1,0 +1,93 @@
+<!doctype HTML>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css?version=3.2" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/js/main.js"></script>
+  </head>
+
+  <body>
+
+
+
+    <h1>Projects</h1>
+    <form>
+      Name:<br>
+      <input type="text" name="Name" id="Name"><br>
+
+      StartDate:<br>
+      <input type="text" name="StartDate" id="StartDate"><br>
+
+      EndDate:<br>
+      <input type="text" name="EndDate" id="EndDate"><br>
+
+      Description:<br>
+      <input type="text" name="Description" id="Description"><br>
+
+      Links:<br>
+      <input type="text" name="Links" id="Links"><br>
+
+      Picture:<br>
+      <input type="text" name="Picture" id="Picture"><br>
+
+      <input type="submit" value="Submit" id="Submit">
+
+    </form>
+
+    <table>
+      <tr>
+          <td>
+            <p> Name </p>
+          </td>
+          <td>
+            <p>StartDate</p>
+          </td>
+          <td>
+          <p> EndDate </p>
+          </td>
+          <td>
+            <p> Description </p>
+          </td>
+
+        </tr>
+      {% for project in projects %}
+      
+        <tr>
+
+            <td>{{ project.Name}}</td>
+            <td>{{ project.StartDate}}</td>
+            <td>{{ project.EndDate}}</td>
+            <td>{{ project.Description}}</td>
+            <td>
+              <form action="{{ url_for('delete_project')}}" method=post>
+                <input type="number" id="id" name="id" value={{project.id}}>
+                <input type="submit" id="delete" value="delete">
+              </form>
+            </td>
+
+
+        </tr>
+
+        
+
+
+
+
+      {% endfor %}
+      </table>
+
+
+
+
+  <div id="message">
+
+  </div>
+
+
+
+
+
+
+
+  </body>
+</html>

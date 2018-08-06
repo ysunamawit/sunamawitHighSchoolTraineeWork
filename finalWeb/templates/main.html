@@ -1,0 +1,65 @@
+<!doctype HTML>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css?version=3.2" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script>
+      function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </head>
+  <body>
+
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'AboutMe')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+    <button class="tablinks" onclick="openTab(event, 'Socials')">Socials</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="AboutMe" class="tabcontent">
+    <h3>Hi there.</h3>
+    <p>I’m Suna . I’m a high school student in <br> the class of 2020. In college, I will be<br> majoring in computer science. I spend my <br>free time running and in the Lincoln track <br>and field/Volleyball team. This website includes<br> some of the projects I have done. Enjoy :)</p>
+  </div>
+
+  <div id="Projects" class="tabcontent">
+    <h3>Projects I have done</h3>
+    <p>(This form allows only me to add projects)</p>
+    {% with projects=projects %}
+    {% include 'projects.html' %}
+    {% endwith %}
+  </div>
+
+  <div id="Socials" class="tabcontent">
+    <h3>Get in touch.</h3>
+    <p>I'm all over the place. You can email me at ysunamawit@yahoo.com, or message me through my LinkedIn. </p>
+  </div>
+
+  <div>
+    <p></p>
+  </div>
+  <img class=me src="http://sarahyostdesign.com/images/sy.png" alt="" style="width:200px">
+  <a href="http://www.linkedin.com">  <img class=me src="http://sarahyostdesign.com/images/sy.png" alt="" style="width:200px"></a> 
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+/* CSS Document */
+
+form {
+    color: white;
+    font-size:25px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.tempTitle {
+    color: gray;
+    font-size:35px;
+    letter-spacing: 20px;
+    text-align: center;
+    font-family:'Lato', sans-serif;
+}
+.temp {
+   color:gray;
+    font-size:35px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family:'Lato', sans-serif;
+}
+.conditionLabel {
+   color:gray;
+    font-size:35px;
+    letter-spacing: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+.condition {
+   color:gray;
+    font-size:35px;
+    letter-spacing: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background-color:black;
+}
+.sunImage {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    display: none;
+}
+.cloudImage {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    display: none;
+}
+.show {
+    display: inherit;
+}
+.parent {
+    position: relative;
+}
