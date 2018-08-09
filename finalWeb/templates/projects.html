@@ -10,8 +10,8 @@
 
 
 
-    <h1>Projects</h1>
-    <form>
+    <h1></h1>
+    <form class = "suna">
       Name:<br>
       <input type="text" name="Name" id="Name"><br>
 
@@ -40,18 +40,21 @@
             <p> Name </p>
           </td>
           <td>
-            <p>StartDate</p>
+            <p>Start Date</p>
           </td>
           <td>
-          <p> EndDate </p>
+          <p> End Date </p>
           </td>
           <td>
             <p> Description </p>
           </td>
+          <td>
+            <p> Remove </p>
+          </td>
 
         </tr>
       {% for project in projects %}
-      
+
         <tr>
 
             <td>{{ project.Name}}</td>
@@ -68,7 +71,7 @@
 
         </tr>
 
-        
+
 
 
 

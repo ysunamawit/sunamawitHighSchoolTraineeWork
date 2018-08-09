@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#Submit").click(function(e) {
+    e.stopImmediatePropagation();
     e.preventDefault();
     let Name = $("#Name").val();
     let StartDate = $("#StartDate").val();
@@ -40,5 +41,6 @@ $(document).ready(function() {
       }
 
     });
+    return false;
   });
 });
